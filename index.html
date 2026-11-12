@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SecurePass - Gerador de Senhas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="header">
+
+            <div class="logo">
+                <div class="logo-icon">S</div>
+                <span>SECURE<span class="red">PASS</span></span>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                Proteção ativa
+            </div>
+
+        </header>
+
+        <main>
+
+            <section class="titulo">
+                <span class="subtitulo">SEGURANÇA DIGITAL</span>
+
+                <h1>Gerador de <span>Senhas</span></h1>
+
+                <p>
+                    Crie senhas fortes, aleatórias e personalizadas
+                    para proteger suas contas.
+                </p>
+            </section>
+
+            <section class="card">
+
+                <label class="label">SUA SENHA GERADA</label>
+
+                <div class="senha-container">
+
+                    <input
+                        type="text"
+                        id="senha"
+                        placeholder="Sua senha aparecerá aqui..."
+                        readonly
+                    >
+
+                    <button id="copiar" class="btn-copiar"
+                        title="Copiar senha">
+                        COPIAR
+                    </button>
+
+                </div>
+
+                <div class="forca-container">
+
+                    <div class="forca-info">
+                        <span>Força da senha</span>
+                        <span id="forca-texto">AGUARDANDO</span>
+                    </div>
+
+                    <div class="barra-forca">
+                        <div id="barra" class="barra"></div>
+                    </div>
+
+                </div>
+
+                <div class="divisor"></div>
+
+                <div class="tamanho-info">
+
+                    <label for="tamanho">
+                        Comprimento da senha
+                    </label>
+
+                    <span id="valor-tamanho">16</span>
+
+                </div>
+
+                <input
+                    type="range"
+                    id="tamanho"
+                    min="4"
+                    max="64"
+                    value="16"
+                >
+
+                <div class="range-info">
+                    <span>4 caracteres</span>
+                    <span>64 caracteres</span>
+                </div>
+
+                <div class="divisor"></div>
+
+                <h3>Personalize sua senha</h3>
+
+                <p class="texto-opcoes">
+                    Escolha os caracteres que deseja incluir.
+                </p>
+
+                <div class="opcoes">
+
+                    <label class="opcao">
+                        <div class="opcao-info">
+                            <span class="simbolo">ABC</span>
+                            <span>Letras maiúsculas</span>
+                        </div>
+
+                        <input type="checkbox"
+                            id="maiusculas" checked>
+                        <span class="check"></span>
+                    </label>
+
+                    <label class="opcao">
+                        <div class="opcao-info">
+                            <span class="simbolo">abc</span>
+                            <span>Letras minúsculas</span>
+                        </div>
+
+                        <input type="checkbox"
+                            id="minusculas" checked>
+                        <span class="check"></span>
+                    </label>
+
+                    <label class="opcao">
+                        <div class="opcao-info">
+                            <span class="simbolo">123</span>
+                            <span>Números</span>
+                        </div>
+
+                        <input type="checkbox"
+                            id="numeros" checked>
+                        <span class="check"></span>
+                    </label>
+
+                    <label class="opcao">
+                        <div class="opcao-info">
+                            <span class="simbolo">!@#</span>
+                            <span>Caracteres especiais</span>
+                        </div>
+
+                        <input type="checkbox"
+                            id="especiais" checked>
+                        <span class="check"></span>
+                    </label>
+
+                </div>
+
+                <p id="mensagem"></p>
+
+                <button id="gerar" class="btn-gerar">
+                    <span>↻</span>
+                    GERAR NOVA SENHA
+                </button>
+
+                <button id="limpar" class="btn-limpar">
+                    LIMPAR SENHA
+                </button>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <span>SECUREPASS</span>
+            <p>Proteja suas informações. Proteja sua identidade.</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
